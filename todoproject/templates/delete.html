@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container form-container">
+  <div class="row">
+    <div class="col-md-12">
+      <form class="done-form" method="POST">
+        {% csrf_token %}
+        <p> Is this task completed? </p>
+        <button class="btn btn-success" type="submit">YES</button>
+        <a class="btn btn-danger" name="cancel" href="/">NO</a>
+        <br>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
